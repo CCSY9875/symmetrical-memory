@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#define UNIT_COST 100
+#define LIVE_COST 1000
+
+int main()
+{
+  char y;
+  char n;
+  int userInt;
+  char name1[30];
+  int uc;
+  int fc=0;
+
+  printf("Enter y if student lives on campus, n otherwise: \n");
+    scanf("%c", &userInt);
+
+    if(userInt==y)
+    {
+        fc+=LIVE_COST;
+    }
+    else
+    {
+        fc+=0;
+    }
+    
+    printf("Enter current unit count: ");
+    scanf("%d", &uc);
+
+        fc = fc + (UNIT_COST * uc);
+
+
+    printf("\n\n");
+
+    printf("Amount due: $%d\n", fc);
+
+}
